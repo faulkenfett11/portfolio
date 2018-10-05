@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Portfolio.css";
 import { MdArrowDropDown } from "react-icons/md";
 import resumePic from "./pictures/ResumePicCircle.png";
 
