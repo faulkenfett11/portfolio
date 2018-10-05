@@ -21,6 +21,8 @@ body::-webkit-scrollbar {
 }
 
 .NavBarContainer {
+  animation: fadeinout 9.2s ease-in forwards;
+
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -122,10 +124,6 @@ body::-webkit-scrollbar {
   transition: color 1s ease;
 }
 
-.h3nav:hover {
-  color: black;
-}
-
 .NavBarContainer input:checked ~ ul {
   transform: none;
 }
@@ -180,7 +178,6 @@ body::-webkit-scrollbar {
 
 .titleName {
   line-height: 5px;
-  margin-top: 10px;
   font-size: 2em;
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.541);
@@ -190,6 +187,7 @@ body::-webkit-scrollbar {
   font-size: 1em;
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.719);
+  margin-top: -5px;
 }
 
 @keyframes fadeout {
@@ -334,15 +332,20 @@ body::-webkit-scrollbar {
   color: rgba(0, 0, 0, 0.699);
   background-color: rgba(0, 0, 0, 0.651);
   border-radius: 100%;
+  animation: fadeinout 9.2s ease-in forwards;
+
 }
 
 .down-icon {
   font-size: 4em;
   color: white;
   padding: 0;
-  -moz-animation: bounce 2.3s infinite;
-  -webkit-animation: bounce 2.3s infinite;
-  animation: bounce 2.3s infinite;
+  -moz-animation: bounce 2.3s;
+  -moz-animation-iteration-count: 3;
+  -webkit-animation: bounce 2.3s;
+  -webkit-animation-iteration-count: 3;
+  animation: bounce 2.3s;
+  animation-iteration-count: 3;
 }
 
 .down-icon:hover {
@@ -484,5 +487,125 @@ body::-webkit-scrollbar {
 
 .skills {
   height: 100vh;
+  position: relative;
+
   background-color: lightgray;
+}
+.projects {
+  position: relative;
+
+  height: 50vh;
+  background-color: white;
+}
+.blog {
+  position: relative;
+  height: 50vh;
+  background-color: gray;
+}
+.contact {
+  position: relative;
+  height: 90vh;
+  background-color: lightgray;
+}
+
+footer {
+  height: 10vh;
+}
+
+.next-back {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  float: right;
+}
+
+.about-nb {
+  position: absolute;
+  bottom: -95vh;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  float: right;
+}
+
+.next {
+  cursor: pointer;
+  height: 4em;
+  width: 4em;
+  color: rgba(0, 0, 0, 0.699);
+  background-color: rgba(0, 0, 0, 0.651);
+  border-radius: 100%;
+}
+
+.next-icon {
+  font-size: 4em;
+  color: white;
+  padding: 0;
+  -moz-animation: bounce 2.3s;
+  -moz-animation-iteration-count: 3;
+  -webkit-animation: bounce 2.3s;
+  -webkit-animation-iteration-count: 3;
+  animation: bounce 2.3s;
+  animation-iteration-count: 3;
+}
+
+.next-icon:hover {
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.next-icon:active {
+  color: rgba(0, 0, 0, 0.144);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  margin: 25px 50px 0px 0px;
+  cursor: pointer;
+  height: 4em;
+  width: 4em;
+  color: rgba(0, 0, 0, 0.699);
+  background-color: rgba(0, 0, 0, 0.651);
+  border-radius: 100%;
+}
+
+.home-icon {
+  font-size: 2em;
+  color: white;
+  padding: 0;
+}
+
+.back {
+  float: right;
+  margin: 0px 50px 25px 0px;
+  cursor: pointer;
+  height: 4em;
+  width: 4em;
+  color: rgba(0, 0, 0, 0.699);
+  background-color: rgba(0, 0, 0, 0.651);
+  border-radius: 100%;
+}
+
+.back-icon {
+  font-size: 4em;
+  color: white;
+  padding: 0;
+}
+
+.back-icon:hover {
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.back-icon:active {
+  color: rgba(0, 0, 0, 0.144);
 }
