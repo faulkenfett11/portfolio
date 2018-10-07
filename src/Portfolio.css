@@ -333,7 +333,6 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.651);
   border-radius: 100%;
   animation: fadeinout 9.2s ease-in forwards;
-
 }
 
 .down-icon {
@@ -437,8 +436,10 @@ body::-webkit-scrollbar {
 }
 
 .about {
+  background-color: #1c4f69e8;
   z-index: 5;
   height: 100vh;
+  color: white;
 }
 
 .about hr {
@@ -446,70 +447,132 @@ body::-webkit-scrollbar {
   margin: 0;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, white, white, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right white(0, 0, 0),
+    white (0, 0, 0),
+    rgba(255, 255, 255, 0)
+  );
   width: 45%;
 }
 
-.about h1 {
-  margin: 0 0 0 165px;
+.section-title {
+  margin: 0 0 0 50px;
   padding: 0;
 }
 
-.about-me {
-  height: 35vh;
-  background-color: #002837ec;
-  color: white;
-  padding: 20px 0px;
-}
-
 .about-media {
-  height: 65vh;
+  position: relative;
+  height: 55.49vh;
+  border-top: 2px solid #1c4f69e8;
+  background-color: white;
 }
 
-.about-me img {
-  width: 225px;
-  height: 225px;
+.about-name {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: "Saira", sans-serif;
+  color: darkgray;
+}
+
+.click-icons {
+  margin-top: 25px;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  width: 150%;
+  z-index: 10;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.mountains {
+  position: absolute;
+  right: 0;
+  top: -157px;
+
+  /* z-index: -3; */
+}
+
+.display-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 250px;
+  top: 0;
+}
+
+.profile-pic {
+  width: 175px;
+  cursor: pointer;
 }
 
 .about-contents {
+  position: relative;
+  height: 40vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 30px;
+  border-bottom: 2px solid white;
+}
+
+.tweets {
+  position: absolute;
+  left: 250px;
+  top: 50px;
+}
+
+.linkedin-display {
+  cursor: pointer;
+  position: absolute;
+  left: 325px;
+  top: 40px;
+  z-index: 200;
+  transition: all 0.2s ease-in-out;
+}
+
+.linkedin-display:hover {
+  transform: scale(1.5);
+  -webkit-filter: drop-shadow(2px 1px 2px black);
+  filter: drop-shadow( 1px 5px 5px black);
+}
+
+.linkedin-display img {
+  width: 250px;
 }
 
 .about-text {
-  width: 65%;
+  margin-left: 200px;
+  width: 30%;
   text-indent: 45px;
   line-height: 25px;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-family: "Saira", sans-serif;
 }
 
-.skills {
-  height: 100vh;
-  position: relative;
-
-  background-color: lightgray;
-}
 .projects {
   position: relative;
+  height: 50vh;
+  background-color: lightblue;
+}
 
-  height: 50vh;
-  background-color: white;
-}
-.blog {
-  position: relative;
-  height: 50vh;
-  background-color: gray;
-}
 .contact {
   position: relative;
-  height: 90vh;
+  height: 48vh;
   background-color: lightgray;
 }
 
 footer {
-  height: 10vh;
+  height: 2.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-family: "Saira", sans-serif;
+  background-color: #002837ec;
+  color: white;
 }
 
 .next-back {
