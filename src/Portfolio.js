@@ -7,7 +7,7 @@ import {
   MdCopyright
 } from "react-icons/md";
 import { IoMdBriefcase } from "react-icons/io";
-import { FaLinkedin, FaTwitter, FaCodepen, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaCodepen, FaGithub } from "react-icons/fa";
 import resumePic from "./pictures/ResumePicCircle.png";
 import mountains from "./pictures/mountaintreeswhite.png";
 import linkedin from "./pictures/linkedin.PNG";
@@ -25,17 +25,31 @@ class App extends Component {
     let aboutText = null;
     if (this.state.display === 1) {
       aboutText = (
-        <p className="about-text">
-          I am a full stack software engineer in San Diego, CA. A veteran of the
-          United States Military, I am highly motivated and always eager to
-          learn new and challenging material. I am always working on new ideas
-          that come to mind; one of my favorites things to do is create, design,
-          and code new projects and watch them come to life. When I'm not
-          working on a project I'm either reading about astronomy, robotics,
-          artificial intelligence, or (my guilty pleasure) movie trivia. And
-          when I'm not at my computer you'll see me out exploring nature and
-          hiking with my pup, Tycho.
-        </p>
+        <div className="main-click">
+          <img
+            src={resumePic}
+            className="profile-pic"
+            alt="resume"
+            onClick={() => {
+              this.setState({
+                display: 1
+              });
+            }}
+          />
+          <p className="about-text">
+            Welcome, my name is Justin Faulkenberry and I am a full stack
+            software engineer located in San Diego, CA. A veteran of the United
+            States Military, I am highly motivated and always eager to learn new
+            and challenging material. If I'm not at my computer coding, then I'm
+            either at my current job with Orangetheory Fitness, reading about
+            astronomy, robotics, artificial intelligence, movie trivia, and
+            listening to podcasts, or out exploring nature and hiking with my
+            Catahoula pup, Tycho.
+            {/* I am always working on new ideas that come
+            to mind; one of my favorites things to do is create, design, and
+            code new projects and watch them come to life.  */}
+          </p>
+        </div>
       );
     }
     if (this.state.display === 2) {
@@ -109,21 +123,13 @@ class App extends Component {
           <h1 className="section-title">About</h1>
           <hr />
           <div className="about-contents">
-            <div className="display">{aboutText}</div>
-            <div className="display-icons">
-              <img
-                src={resumePic}
-                className="profile-pic"
-                alt="resume"
-                onClick={() => {
-                  this.setState({
-                    display: 1
-                  });
-                }}
-              />
-              <h1 className="about-name">Justin Faulkenberry</h1>
-              <div className="click-icons">
+            {aboutText}
+
+            <div className="click-icons">
+              <div className="media-links">
                 <IoMdBriefcase className="click experience" />
+              </div>
+              <div className="media-links">
                 <FaTwitter
                   className="click twitter"
                   onClick={() => {
@@ -132,7 +138,9 @@ class App extends Component {
                     });
                   }}
                 />
-                <FaLinkedin
+              </div>
+              <div className="media-links">
+                <FaLinkedinIn
                   className="click linkedin"
                   onClick={() => {
                     this.setState({
@@ -140,7 +148,11 @@ class App extends Component {
                     });
                   }}
                 />
+              </div>
+              <div className="media-links">
                 <FaCodepen className="click codepen" />
+              </div>
+              <div className="media-links">
                 <FaGithub className="click github" />
               </div>
             </div>
