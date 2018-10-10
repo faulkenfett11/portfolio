@@ -72,7 +72,7 @@ class App extends Component {
     if (this.state.display === 3) {
       aboutText = (
         <div className="linkedin-display">
-          <img src={linkedin} />
+          <img src={linkedin} className="linkedin-prof"/>
         </div>
       );
     }
