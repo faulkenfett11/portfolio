@@ -6,12 +6,25 @@ import {
   MdHome,
   MdCopyright
 } from "react-icons/md";
-import { IoMdBriefcase } from "react-icons/io";
-import { FaLinkedinIn, FaTwitter, FaCodepen, FaGithub } from "react-icons/fa";
+// import { IoMdBriefcase } from "react-icons/io";
+import { FaLinkedinIn, FaTwitter, FaUser, FaBriefcase } from "react-icons/fa";
 import resumePic from "./pictures/ResumePicCircle.png";
 import mountains from "./pictures/mountaintreeswhite.png";
 import linkedin from "./pictures/linkedin.PNG";
 import { Timeline } from "react-twitter-widgets";
+import logo from "./logos/logo.svg";
+import CSSLogo from "./logos/CSSLogo.png";
+import html5Logo from "./logos/html5Logo.png";
+import JavaScriptlogo from "./logos/JavaScriptlogo.png";
+import ReduxLogo from "./logos/ReduxLogo.png";
+import Cicon from "./logos/Cicon.png";
+import less_logo from "./logos/less_logo.png";
+import jquerylogo from "./logos/jquerylogo.png";
+import mongodblogo from "./logos/mongodblogo.png";
+import nodejslogo from "./logos/nodejslogo.png";
+import bootstrap from "./logos/bootstrap.png";
+import PythonIcon from "./logos/PythonIcon.png";
+import SassLogo from "./logos/SassLogo.png";
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +39,7 @@ class App extends Component {
     if (this.state.display === 1) {
       aboutText = (
         <div className="main-click">
-          <img
+          {/* <img
             src={resumePic}
             className="profile-pic"
             alt="resume"
@@ -35,7 +48,7 @@ class App extends Component {
                 display: 1
               });
             }}
-          />
+          /> */}
           <p className="about-text">
             Welcome, my name is Justin Faulkenberry and I am a full stack
             software engineer located in San Diego, CA. A veteran of the United
@@ -72,7 +85,7 @@ class App extends Component {
     if (this.state.display === 3) {
       aboutText = (
         <div className="linkedin-display">
-          <img src={linkedin} className="linkedin-prof"/>
+          <img src={linkedin} className="linkedin-prof" />
         </div>
       );
     }
@@ -127,17 +140,17 @@ class App extends Component {
 
             <div className="click-icons">
               <div className="media-links">
-                <IoMdBriefcase className="click experience" />
-              </div>
-              <div className="media-links">
-                <FaTwitter
-                  className="click twitter"
+                <FaUser
+                  className="click github"
                   onClick={() => {
                     this.setState({
-                      display: 2
+                      display: 1
                     });
                   }}
                 />
+              </div>
+              <div className="media-links">
+                <FaBriefcase className="click experience" />
               </div>
               <div className="media-links">
                 <FaLinkedinIn
@@ -150,16 +163,33 @@ class App extends Component {
                 />
               </div>
               <div className="media-links">
-                <FaCodepen className="click codepen" />
-              </div>
-              <div className="media-links">
-                <FaGithub className="click github" />
+                <FaTwitter
+                  className="click twitter"
+                  onClick={() => {
+                    this.setState({
+                      display: 2
+                    });
+                  }}
+                />
               </div>
             </div>
           </div>
           <div className="about-media" id="tech">
             <h1 className="section-title">Skills</h1>
             <img src={mountains} className="mountains" alt="mountains" />
+            <img src={CSSLogo} alt="techIcons" className="tech-icons" />
+            <img src={html5Logo} alt="techIcons" className="tech-icons" />
+            <img src={JavaScriptlogo} alt="techIcons" className="tech-icons" />
+            <img src={logo} alt="techIcons" className="tech-icons" />
+            <img src={ReduxLogo} alt="techIcons" className="tech-icons" />
+            <img src={Cicon} alt="techIcons" className="tech-icons" />
+            <img src={less_logo} alt="techIcons" className="tech-icons" />
+            <img src={jquerylogo} alt="techIcons" className="tech-icons" />
+            <img src={mongodblogo} alt="techIcons" className="tech-icons" />
+            <img src={nodejslogo} alt="techIcons" className="tech-icons" />
+            <img src={SassLogo} alt="techIcons" className="tech-icons" />
+            <img src={bootstrap} alt="techIcons" className="tech-icons" />
+            <img src={PythonIcon} alt="techIcons" className="tech-icons" />
           </div>
           <div className="about-nb">
             <a className="back" href="#home">
