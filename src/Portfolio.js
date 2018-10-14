@@ -8,7 +8,6 @@ import {
 } from "react-icons/md";
 // import { IoMdBriefcase } from "react-icons/io";
 import { FaLinkedinIn, FaTwitter, FaUser, FaBriefcase } from "react-icons/fa";
-import resumePic from "./pictures/ResumePicCircle.png";
 import mountains from "./pictures/mountaintreeswhite.png";
 import linkedin from "./pictures/linkedin.PNG";
 import { Timeline } from "react-twitter-widgets";
@@ -85,7 +84,12 @@ class App extends Component {
     if (this.state.display === 3) {
       aboutText = (
         <div className="linkedin-display">
-          <img src={linkedin} className="linkedin-prof" />
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/justin-faulkenberry/"
+          >
+            <img src={linkedin} className="linkedin-prof" />
+          </a>
         </div>
       );
     }
@@ -175,21 +179,28 @@ class App extends Component {
             </div>
           </div>
           <div className="about-media" id="tech">
-            <h1 className="section-title">Skills</h1>
-            <img src={mountains} className="mountains" alt="mountains" />
-            <img src={CSSLogo} alt="techIcons" className="tech-icons" />
-            <img src={html5Logo} alt="techIcons" className="tech-icons" />
-            <img src={JavaScriptlogo} alt="techIcons" className="tech-icons" />
-            <img src={logo} alt="techIcons" className="tech-icons" />
-            <img src={ReduxLogo} alt="techIcons" className="tech-icons" />
-            <img src={Cicon} alt="techIcons" className="tech-icons" />
-            <img src={less_logo} alt="techIcons" className="tech-icons" />
-            <img src={jquerylogo} alt="techIcons" className="tech-icons" />
-            <img src={mongodblogo} alt="techIcons" className="tech-icons" />
-            <img src={nodejslogo} alt="techIcons" className="tech-icons" />
-            <img src={SassLogo} alt="techIcons" className="tech-icons" />
-            <img src={bootstrap} alt="techIcons" className="tech-icons" />
-            <img src={PythonIcon} alt="techIcons" className="tech-icons" />
+            <h1 className="section-skills">Skills</h1>
+            <hr className="media-hr" />
+            <div className="tech-logos">
+              <img src={mountains} className="mountains" alt="mountains" />
+              <img src={CSSLogo} alt="techIcons" className="tech-icons" />
+              <img src={html5Logo} alt="techIcons" className="tech-icons" />
+              <img
+                src={JavaScriptlogo}
+                alt="techIcons"
+                className="tech-icons"
+              />
+              <img src={logo} alt="techIcons" className="tech-icons1" />
+              <img src={ReduxLogo} alt="techIcons" className="tech-icons" />
+              <img src={PythonIcon} alt="techIcons" className="tech-icons" />
+              <img src={nodejslogo} alt="techIcons" className="tech-icons" />
+              <img src={jquerylogo} alt="techIcons" className="tech-icons" />
+              <img src={mongodblogo} alt="techIcons" className="tech-icons" />
+              <img src={less_logo} alt="techIcons" className="tech-icons" />
+              <img src={SassLogo} alt="techIcons" className="tech-icons" />
+              <img src={bootstrap} alt="techIcons" className="tech-icons" />
+              <img src={Cicon} alt="techIcons" className="tech-icons" />
+            </div>
           </div>
           <div className="about-nb">
             <a className="back" href="#home">
